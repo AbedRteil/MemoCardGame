@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory Card Game</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+
+  <body>
+    <div class="game-stats">
+      <div class="level-indicators">
+        <span class="level" id="lvl1" style="background-color: yellow">1</span>
+        <span class="level" id="lvl2">2</span>
+        <span class="level" id="lvl3">3</span>
+      </div>
+      <button id="hintbtn">Hint</button>
+      <p class="stats">
+        Lives: <span id="heart1">💛</span> <span id="heart2">💛</span>
+        <span id="heart3">💛</span><span id="heart4">💛</span>
+      </p>
+      <button id="restart">🔄 Restart</button>
+      <button id="nxtlvl">➡️ Next Level</button>
+      <p class="stats">Time: <span id="timer">30</span>s</p>
+    </div>
+
+    <div class="win" id="win">Level Won!</div>
+    <div id="loose" class="lost">Time is up! you lost</div>
+    <div id="died" class="lost">You died :(</div>
+    <div id="gamewon" class="win">Congrats! You won the game :)</div>
+
+    <div class="game-board">
+      <p class="card" data-id="banana" data-img="bananas.png">❓</p>
+      <p class="card" data-id="banana" data-img="bananas.png">❓</p>
+      <p class="card" data-id="grape" data-img="grapes.png">❓</p>
+      <p class="card" data-id="grape" data-img="grapes.png">❓</p>
+      <p class="card" data-id="apple" data-img="apple.png">❓</p>
+      <p class="card" data-id="apple" data-img="apple.png">❓</p>
+      <p class="card" data-id="strawberry" data-img="strawberry.png">❓</p>
+      <p class="card" data-id="strawberry" data-img="strawberry.png">❓</p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
