@@ -14,9 +14,12 @@
     const timerid = document.getElementById("timer");
     const cards = document.querySelectorAll(".card");
     const board = document.querySelector(".game-board");
+    const startbt=document.getElementById("startbtn");
+    const startdiv=document.getElementById("gamestart");
+    const uname=document.getElementById('username');
     let firstCard = null;
     let secondCard = null;
-    let lockBoard = false;
+    let lockBoard = true;
     let score = 0;
     let timer = 30;
     let lvlcompleted = 0;
@@ -30,17 +33,8 @@
     const lostsound = new Audio("loosesound.mp3");
     const restartsound = new Audio("restartsound.mp3");
 
-    let countdown = setInterval(() => {
-      timerid.textContent = timer;
-      timer--;
-      if (timer < 0) {
-        restartbtn.style.display = "flex";
-        clearInterval(countdown);
-        loosediv.style.display = "flex";
-        lockBoard = true;
-        lostsound.play();
-      }
-    }, 1000);
+    
+    let countdown = 0; 
 
     cards.forEach((card) => {
       card.addEventListener("click", () => {
@@ -129,6 +123,25 @@
       resethearts();
       restartsound.play();
     });
+
+    startbt.addEventListener("click", () => {
+      if(uname.value==="")
+      alert("enter username");
+    else{
+      lockBoard=false;
+      startdiv.style.display="none";
+      countdown = setInterval(() => {
+      timerid.textContent = timer;
+      timer--;
+      if (timer < 0) {
+        restartbtn.style.display = "flex";
+        clearInterval(countdown);
+        loosediv.style.display = "flex";
+        lockBoard = true;
+        lostsound.play();
+      }
+    }, 1000);
+   }   });
 
     nextbtn.addEventListener("click", () => {
       if (currentlvl === 2) next(20);
