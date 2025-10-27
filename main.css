@@ -234,8 +234,8 @@ body {
   }
 
   .card {
-    width: 30vw; /* smaller width */
-    height: 40vw; /* smaller height */
+    width: 10vw; /* smaller width */
+    height: 20vw; /* smaller height */
     font-size: 0.95rem; /* slightly smaller text */
   }
 
@@ -280,8 +280,8 @@ body {
   }
 
   .card {
-    width: 25vw;
-    height: 35vw;
+    width: 20vw;
+    height: 25vw;
     font-size: 1rem;
   }
 }
