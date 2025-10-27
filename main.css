@@ -227,6 +227,7 @@ body {
   color: aliceblue;
   cursor: not-allowed;
 }
+
 @media (max-width: 480px) {
   .game-board {
     grid-template-columns: repeat(2, 1fr);
