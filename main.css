@@ -234,8 +234,8 @@ body {
   }
 
   .card {
-    width: 10vw; /* smaller width */
-    height: 20vw; /* smaller height */
+    width: 20vw; /* smaller width */
+    height: 25vw; /* smaller height */
     font-size: 0.95rem; /* slightly smaller text */
   }
 
@@ -269,45 +269,5 @@ body {
   .win {
     font-size: 1.2rem;
     padding: 18px 35px;
-  }
-}
-
-/* Landscape mode for phones/tablets */
-@media (max-width: 768px) and (orientation: landscape) {
-  .game-board {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
-  }
-
-  .card {
-    width: 20vw;
-    height: 25vw;
-    font-size: 1rem;
-  }
-}
-
-#rotate-warning {
-  display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: rgba(0, 0, 0, 0.8);
-  color: white;
-  padding: 20px 30px;
-  border-radius: 10px;
-  font-size: 1rem;
-  font-weight: bold;
-  text-align: center;
-  z-index: 10000;
-}
-
-@media (orientation: portrait) and (max-width: 768px) {
-  #rotate-warning {
-    display: block;
-  }
-  .game-board {
-    filter: blur(4px);
-    pointer-events: none;
   }
 }
