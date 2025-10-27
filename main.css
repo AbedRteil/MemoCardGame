@@ -285,3 +285,29 @@ body {
     font-size: 1rem;
   }
 }
+
+#rotate-warning {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px 30px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  z-index: 10000;
+}
+
+@media (orientation: portrait) and (max-width: 768px) {
+  #rotate-warning {
+    display: block;
+  }
+  .game-board {
+    filter: blur(4px);
+    pointer-events: none;
+  }
+}
