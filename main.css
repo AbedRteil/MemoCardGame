@@ -227,3 +227,47 @@ body {
   color: aliceblue;
   cursor: not-allowed;
 }
+@media (max-width: 480px) {
+  .game-board {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .card {
+    width: 40vw;
+    height: 50vw;
+    font-size: 1.1rem;
+  }
+
+  .stats {
+    font-size: 1rem;
+  }
+
+  .start {
+    padding: 60px 120px;
+    font-size: 1.2rem;
+  }
+
+  #startbtn {
+    font-size: 1rem;
+    padding: 10px 30px;
+  }
+
+  #username {
+    width: 30vh;
+    height: 6vh;
+    font-size: 0.9rem;
+  }
+
+  .level {
+    width: 28px;
+    height: 28px;
+    font-size: 0.8rem;
+  }
+
+  .lost,
+  .win {
+    font-size: 1.3rem;
+    padding: 20px 40px;
+  }
+}
